@@ -1,0 +1,19 @@
+1. Onde está instalado o jdk?
+2. E qual o caminho completo até o Java e o JavaC?
+3. Como compilamos um programa em linha de comando?
+4. Como executamos esse programa?
+5. O que são variáveis de ambiente?
+6. Qualquer um pode criar variáveis de ambiente?
+7. Como criar uma variável de ambiente?
+8. O que é o JAVA_HOME?
+
+Respostas
+
+1. Dentro da partição (:H) , na pasta "java - amazon corretto"
+2. H:\Java - Amazon Corretto\jdk11.0.10_9
+3. 
+4. 
+5. Variáveis que só podem ser usadas no programa que está sendo rodado, "temporárias"
+6. Não, apenas as pessoas que tiveram a licença do respectivo programa
+7. 
+8. O diretório padrão de uso, conhecido como "main"
