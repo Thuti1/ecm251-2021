@@ -2,6 +2,7 @@ package Sarnadas.Arthur;
 
 public class Contas {
     //Declarar as infos de cada conta
+    private Usuários usuario;
     private int idConta;
     private double saldo;
 

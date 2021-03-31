@@ -9,7 +9,5 @@ public class Transações {
         Random r = new Random();
         return r.nextInt((max-min)+1) + min;
     //Dividir a String
-    String s =    
-
     }
 }
