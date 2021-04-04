@@ -4,64 +4,62 @@ import java.text.NumberFormat;
 import java.util.Random;
 
 public class Contas {
+
     //Declarar as infos de cada conta
-    private Usuários usuario;
+
+    private String info;
     private int idConta;
     private double saldo;
-    private static int R = 0;
+    private static int n = 0; // Implementar o idConta
 
     //Fazer um construtor da conta
-    public Contas(int idConta, double saldo, String nome, String senha, String email) {
-        this.idConta = idConta;
+
+    public Contas(double saldo) {
+        n += 1; // Número da conta (progressivo)
+        this.idConta = n;
         this.saldo = saldo;
-        this.usuario = new Usuários(nome,senha,email);
     }
+
+    // Acesso de atributos (getters)
+
+    public int getIdConta() {
+        return idConta;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
     //Esses métodos não são utilizáveis pelo usuário
-    private void depositar(double valor) {
-        this.saldo += valor;
+
+    public static void depositar(Contas conta, double valor) {
+        conta.saldo += valor;
     }
 
-    private boolean sacar(Contas conta, double valor) {
-        if(valor <= conta.saldo){
-            conta.saldo -= valor;
-            return true;
-        }
-        return false;
+    public static void retirar(Contas conta, double valor) {
+        if (valor <= conta.saldo) { conta.saldo -= valor; }
     }
 
-    private static int getRandomNumberInRange(int min, int max){
-        Random r = new Random();
-        return r.nextInt((max-min)+1) + min;
+    // Fazer o QR Code
 
-        //Métodos das contas
-    public boolean transacao(Contas pagador, Contas recebedor, String T) {
-        String[] dados = T.split(";");
-        recebedor =
-                valor = dados[2];
-        if (sacar(pagador, valor)) {
-            recebedor.depositar(valor);
-        }
+    public void QR_Code_id(String nome, double valor) {
+        this.info = Transações.QR_Code(this.idConta,nome, valor);
     }
-    /*    if (this.sacar(valor)) {
-            destino.depositar(valor);
-            return true;
-        }
-        return false;
-    }
-    */
-    // Exibição das infos da conta
-    public String receber(Contas recebedor, double valor){
-        //outra possibilidade para passar int pra String = NumberFormat.getInstance().format(num inteiro)
-        String T = Integer.toString(recebedor.idConta) + ";"+recebedor.usuario.nome + Double.toString(valor)+";"+ Integer.toString(getRandomNumberInRange(1000, 9999));
-        return T;
-        }
+
+    //Exibição em texto das infos da classe
 
 
     @Override
     public String toString() {
         return "Contas{" +
-                "idConta=" + idConta +
+                ", idConta=" + idConta +
                 ", saldo=" + saldo +
+                "info='" + info + '\'' +
                 '}';
     }
 }
+
