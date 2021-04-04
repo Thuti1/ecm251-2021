@@ -24,7 +24,7 @@ public class Transações {
 
     public static String QR_Code(int idConta, String nome, double valor){
         //outra possibilidade para passar int pra String = NumberFormat.getInstance().format(num inteiro)
-        String T = Integer.toString(idConta) + ";"+ nome + Double.toString(valor)+";"+ Integer.toString(getRandomNumberInRange(1000, 9999));
+        String T = Integer.toString(idConta) + ";"+ nome + ";" + Double.toString(valor)+";"+ Integer.toString(getRandomNumberInRange(1000, 9999));
         return T;
     }
 }

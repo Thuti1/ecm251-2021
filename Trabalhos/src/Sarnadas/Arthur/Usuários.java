@@ -2,14 +2,14 @@ package Sarnadas.Arthur;
 
 public class Usuários {
 
-    //Declarar as infos de cada usuário
+    // Declarar as infos de cada usuário
 
     private String nome;
     private String senha;
     private String email;
     private Contas conta;
 
-    //Criar um construtor de usuários
+    // Criar um construtor de usuários
 
     public Usuários(String nome, String senha, String email) {
         this.nome = nome;
@@ -55,13 +55,13 @@ public class Usuários {
         }
     }
 
-    //Criação de uma conta
+    // Criação de uma conta
 
     public void fazerConta(double saldo){
         this.conta = new Contas(saldo);
     }
 
-    //Criar forma de exibir as infos de um certo usuário
+    // Criar forma de exibir as infos de um certo usuário
 
     @Override
     public String toString() {
