@@ -5,7 +5,7 @@ import arthur.castanheda.sarnadas.model.Jogada;
 public class Pedra extends Jogada{
     @Override
     public boolean verificarSeGanhei(Jogada jogada) {
-        return (jogada instanceof Pedra) || (jogada instanceof Tesoura);
+        return (jogada instanceof Tesoura);
     }
 
     @Override
