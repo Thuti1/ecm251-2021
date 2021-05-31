@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="174dabf4-c36f-4b65-97f7-e308e1c1fb6e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/controlador/Sistema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/enumeracao/Resultado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/Jogada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/Jogador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/classico/Papel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/classico/Pedra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/classico/Tesoura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/jeff/Lagarto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/arthur/c/s/model/jeff/Spoke.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/.idea/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/.idea/project-template.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/controlador/Sistema.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/controlador/Sistema_plus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/enumeracao/Resultado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/Jogada.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/Jogador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/classico/Papel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/classico/Pedra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/classico/Tesoura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/jeff/Lagarto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/src/arthur/castanheda/sarnadas/model/jeff/Spoke.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pedra-papel-tesoura/untitled104.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,5 +121,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
