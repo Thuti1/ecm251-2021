@@ -1,5 +1,5 @@
 package arthur.sarnadas.enums;
 
 public enum Tipos {
-    MobileUsers, HeavyLifters, ScriptGuys, BigBrothers
+    MOBILEUSERS, HEAVYLIFTERS, SCRIPTGUYS, BIGBROTHERS
 }

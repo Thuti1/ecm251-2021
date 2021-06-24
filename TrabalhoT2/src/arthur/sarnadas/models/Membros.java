@@ -1,4 +1,9 @@
 package arthur.sarnadas.models;
 
-public class Membros {
+import arthur.sarnadas.interfaces.Apresentacao;
+import arthur.sarnadas.interfaces.postarMensagem;
+import arthur.sarnadas.enums.Horarios;
+import arthur.sarnadas.enums.Tipos;
+
+public class Membros implements postarMensagem, Apresentacao {
 }
