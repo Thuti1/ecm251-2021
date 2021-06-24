@@ -3,11 +3,11 @@
 // Luiz F Rodrigues – 19.01358-2
 
 import arthur.sarnadas.models.Sistema;
-package arthur.sarnadas;
 
 public class Main {
 
     public static void main(String[] args) {
 	//Iniciar Sistema:
+        Sistema.Menu();
     }
 }
