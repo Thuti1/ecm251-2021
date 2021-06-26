@@ -82,7 +82,7 @@ public class Sistema {
      */
 
     public void AbrirCSV(){
-        File arquivoCSV = new File("D:\\Documents\\GitHub\\ecm251-2021\\Atividade02\\src\\benuthe\\giovanni\\arquivo_super_Secreto_nao_abrir.csv");
+        File arquivoCSV = new File("E:\\yourfile.csv");
         try {
             String linhasDoArquivo = new String();
             Scanner leitor = new Scanner(arquivoCSV);
