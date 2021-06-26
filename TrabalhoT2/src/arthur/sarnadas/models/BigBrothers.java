@@ -1,14 +1,14 @@
 package arthur.sarnadas.models;
 
+import arthur.sarnadas.enums.Tipos;
+
 /**
- * Classe herdada de Membros do Tipo: Big Brother
+ * Classe herdada de Membros do Tipo: Big Brother ;
  * Importando o Enum Tipos
  * Com um construtor de sua classe e
- * métodos de postar mensagem tanto para o horário regular
- * quanto horário "extra".
+ * metodos de postar mensagem tanto para o horario regular
+ * quanto horario "extra".
  */
-
-import arthur.sarnadas.enums.Tipos;
 
 public class BigBrothers extends Membros{
     public BigBrothers(String username, String email, Tipos funcao) {
@@ -23,9 +23,5 @@ public class BigBrothers extends Membros{
     @Override
     public void postarExtra() {
         System.out.println("...");
-    }
-    @Override
-    public void apresentar() {
-        System.out.println("BRAZIIIIIILL: " + getUsername());
     }
 }

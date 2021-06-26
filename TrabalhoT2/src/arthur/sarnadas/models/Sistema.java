@@ -53,7 +53,7 @@ public class Sistema {
 
     /**
      * Metodo que, em loop, unifica as acoes a serem realizadas ao rodar o programa.
-     * @throws IOException
+     * @throws IOException excecao p/ leitura e escrita de arquivo
      */
 
     public void executar() throws IOException{
@@ -82,7 +82,7 @@ public class Sistema {
      */
 
     public void AbrirCSV(){
-        File arquivoCSV = new File("E:\\yourfile.csv");
+        File arquivoCSV = new File("E:\\arquivo_super_Secreto_nao_abrir.csv");
         try {
             String linhasDoArquivo = new String();
             Scanner leitor = new Scanner(arquivoCSV);
@@ -194,8 +194,8 @@ public class Sistema {
      *      Sair        -   Termina o programa.
      *     Default      -   Pede que o usuario digite um comando valido.
      *
-     * @param opcao
-     * @throws IOException
+     * @param opcao usado para o switch
+     * @throws IOException excecao p/ leitura e escrita de arquivo
      */
 
     private void avaliarOpcao(String opcao) throws IOException {
@@ -222,7 +222,7 @@ public class Sistema {
                 else{
                     System.out.println("Funcao invalida, tente cadastrar novamente.");
                 }
-                PrintWriter pw = new PrintWriter("D:\\Documents\\GitHub\\ecm251-2021\\Atividade02\\src\\benuthe\\giovanni\\arquivo_super_Secreto_nao_abrir.csv");
+                PrintWriter pw = new PrintWriter("E:\\arquivo_super_Secreto_nao_abrir.csv");
                 for(Membros membro : Membros){
                     pw.println(membro.getUsername() + ";" + membro.getEmail() + ";" + membro.getFuncao().toString());
                 }
@@ -271,7 +271,7 @@ public class Sistema {
                     else if (exclusao.equals(membro.getUsername())) {
                         //iter.remove();
                         Membros.remove(membro);
-                        PrintWriter pw2 = new PrintWriter("D:\\Documents\\GitHub\\ecm251-2021\\Atividade02\\src\\benuthe\\giovanni\\arquivo_super_Secreto_nao_abrir.csv");
+                        PrintWriter pw2 = new PrintWriter("E:\\arquivo_super_Secreto_nao_abrir.csv");
                         for(Membros membro2 : Membros){
                             pw2.println(membro2.getUsername() + ";" + membro2.getEmail() + ";" + membro2.getFuncao().toString());
                         }
@@ -307,7 +307,7 @@ public class Sistema {
     /**
      * O metodo avaliarOpcaoPad recebe uma String de um caractere que representa a escolha feita no menu.
      * Suas opcoes sao as mesmas de avaliarOpcao, exceto Cadastrar e Excluir.
-     * @param opcao
+     * @param opcao usado para o switch
      */
 
     private void avaliarOpcaoPad(String opcao) {

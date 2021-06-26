@@ -5,7 +5,7 @@ import arthur.sarnadas.interfaces.postarMensagem;
 import arthur.sarnadas.enums.Tipos;
 
 /**
- * Classe mãe, abstrata, que é herdada pelas categorias de membros.
+ * Classe mae, abstrata, herdada pelas categorias de membros.
  * Esta classe possui no construtor o username, email e funcao.
  * Ela implementa as interfaces PostarMensagem e Apresentacao.
  */
@@ -17,9 +17,9 @@ public abstract class Membros implements Apresentacao, postarMensagem {
 
     /**
      * Construtor da classe Membros
-     * @param username
-     * @param email
-     * @param funcao
+     * @param username do membro
+     * @param email do membro
+     * @param funcao do membro
      */
 
     public Membros(String username, String email,Tipos funcao) {
