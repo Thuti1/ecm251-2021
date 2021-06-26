@@ -1,16 +1,13 @@
 package arthur.sarnadas.models;
 
-// Biblioteca para leitura de .CSV
-import java.io.BufferedReader;
-import java.io.FileReader;
-
 import arthur.sarnadas.interfaces.Apresentacao;
 import arthur.sarnadas.interfaces.postarMensagem;
-import arthur.sarnadas.enums.Horarios;
 import arthur.sarnadas.enums.Tipos;
 
 /**
- * Utilizamos o email como ID, por maior facilidade de identificação
+ * Classe mãe, abstrata, que é herdada pelas categorias de membros.
+ * Esta classe possui no construtor o username, email e funcao.
+ * Ela implementa as interfaces PostarMensagem e Apresentacao.
  */
 
 public abstract class Membros implements Apresentacao, postarMensagem {
@@ -18,25 +15,71 @@ public abstract class Membros implements Apresentacao, postarMensagem {
     private String email;
     private Tipos funcao;
 
-    public Membros(String username, String email, Tipos funcao) {
+    /**
+     * Construtor da classe Membros
+     * @param username
+     * @param email
+     * @param funcao
+     */
+
+    public Membros(String username, String email,Tipos funcao) {
         this.username = username;
         this.email = email;
         this.funcao = funcao;
     }
 
-    public Tipos getFuncao() {
-        return funcao;
+    /**
+     * Implemetacao dos metodos impostos pelas interfaces implementadas(contrato).
+     */
+
+    @Override
+    public void apresentar() {
+        System.out.println("O " + getFuncao() + " " + getUsername() + " pediu este relatorio:");
     }
 
-    public void setFuncao(Tipos funcao) {
-        this.funcao = funcao;
+    @Override
+    public void postarRegular() {
+
     }
+
+    @Override
+    public void postarExtra() {
+
+    }
+
+    /**
+     * Getter de username.
+     * @return username
+     */
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    /**
+     * Getter de email.
+     * @return email
+     */
+
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * Getter da funcao.
+     * @return funcao
+     */
+
+    public Tipos getFuncao() {
+        return funcao;
+    }
+
+    @Override
+    public String toString() {
+        return "Membros{" +
+                "username='" + username + '\'' +
+                ", email='" + email + '\'' +
+                ", funcao=" + funcao +
+                '}';
     }
 }
