@@ -9,6 +9,10 @@ import arthur.sarnadas.interfaces.postarMensagem;
 import arthur.sarnadas.enums.Horarios;
 import arthur.sarnadas.enums.Tipos;
 
+/**
+ * Utilizamos o email como ID, por maior facilidade de identificação
+ */
+
 public abstract class Membros implements Apresentacao, postarMensagem {
     private String username;
     private String email;

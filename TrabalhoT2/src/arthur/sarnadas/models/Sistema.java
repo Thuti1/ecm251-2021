@@ -1,10 +1,12 @@
 package arthur.sarnadas.models;
 
+import java.io.FileReader;
 import java.util.LinkedList;
 import java.util.Locale;
 import java.util.Scanner;
 import arthur.sarnadas.CLS; //Tentar limpar a tela depois
 import arthur.sarnadas.enums.Tipos;
+import com.opencsv.CSVReader;
 
 
 import static arthur.sarnadas.enums.Tipos.BIGBROTHERS;
@@ -18,6 +20,7 @@ public class Sistema {
     Scanner Func = new Scanner(System.in);
 
     LinkedList<Membros> Members = new LinkedList<Membros>();
+    CSVReader reader = new CSVReader(new FileReader())
 
     public void opcao(String escolha){
         switch(escolha) {
