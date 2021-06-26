@@ -15,12 +15,12 @@ public class ScriptGuys extends Membros{
         super(username, email, funcao);
     }
     @Override
-    public void postarReg() {
+    public void postarRegular() {
         System.out.println("Prazer em ajudar novos amigos de código!");
     }
 
     @Override
-    public void postarExt() {
+    public void postarExtra() {
         System.out.println("QU3Ro_S3us_r3curs0s.py");
     }
     @Override

@@ -15,12 +15,12 @@ public class MobileMembers extends Membros{
         super(username, email, funcao);
     }
     @Override
-    public void postarReg() {
+    public void postarRegular() {
         System.out.println("Happy Coding!");
     }
 
     @Override
-    public void postarExt() {
+    public void postarExtra() {
         System.out.println("Happy_C0d1ng. Maskers");
     }
     @Override

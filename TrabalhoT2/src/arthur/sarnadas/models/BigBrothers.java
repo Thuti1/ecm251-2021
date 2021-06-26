@@ -16,12 +16,12 @@ public class BigBrothers extends Membros{
     }
 
     @Override
-    public void postarReg() {
+    public void postarRegular() {
         System.out.println("Sempre ajudando as pessoas membros ou não S2!");
     }
 
     @Override
-    public void postarExt() {
+    public void postarExtra() {
         System.out.println("...");
     }
     @Override

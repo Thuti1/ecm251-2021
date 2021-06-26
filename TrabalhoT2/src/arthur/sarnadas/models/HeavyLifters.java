@@ -15,12 +15,12 @@ public class HeavyLifters extends Membros{
         super(username, email, funcao);
     }
     @Override
-    public void postarReg() {
+    public void postarRegular() {
         System.out.println("Podem contar conosco!");
     }
 
     @Override
-    public void postarExt() {
+    public void postarExtra() {
         System.out.println("N00b_qu3_n_Se_r3pita.bat");
     }
     @Override
