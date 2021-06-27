@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"arthur.sarnadas.interfaces","l":"Consumidor"},{"p":"arthur.sarnadas","l":"Main"},{"p":"arthur.sarnadas.models","l":"Pessoa"},{"p":"arthur.sarnadas.interfaces","l":"Vendedor"}]
