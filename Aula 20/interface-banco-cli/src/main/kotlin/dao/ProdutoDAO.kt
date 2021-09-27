@@ -31,7 +31,7 @@ class ProdutoDAO : GenericoDAO {
         // Cria um caminho para realizar queries sql no banco
         val sqlStatement = connection.createStatement()
         // Executa uma query de busca
-        val resultSet = sqlStatement.executeQuery("SELECT * FROM produtos WHERE id == ${id};")
+        val resultSet = sqlStatement.executeQuery("SELECT * FROM produtos;")
         // Intera pelo resultado obtido
         val produtos = mutableListOf<Produto>()
         while (resultSet.next()){
