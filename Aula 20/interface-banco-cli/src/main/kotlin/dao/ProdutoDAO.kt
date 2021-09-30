@@ -50,12 +50,12 @@ class ProdutoDAO : GenericoDAO {
 
     fun pegarTodosSeguro(): List<Any> {
         val produtos = mutableListOf<Produto>()
-        val connection : ConexaoDAO? = null
+        var connection : ConexaoDAO? = null
         try {
             // Cria uma conexão com o banco
             connection = ConexaoDAO()
             // Executa uma query de busca
-            val resultSet = connection.executeQuery("SELECT * FROM maua;")
+            val resultSet = connection.executeQuery("SELECT * FROM produtos;") // FROM maua
             // Intera pelo resultado obtido
             while (resultSet?.next()!!){
                 produtos.add(
@@ -79,22 +79,69 @@ class ProdutoDAO : GenericoDAO {
 
     override fun inserirUm(objeto: Any) {
         val connectionDAO = ConexaoDAO()
-        val preparedStatement = connectionDAO.getPreparedStatement("""INSERTO INTO produtos
-            nome, valor, quantidade
+        val preparedStatement = connectionDAO.getPreparedStatement("""
+            INSERT INTO produtos
+            (nome, valor, quantidade)
             VALUES (?,?,?);
             """.trimMargin())
+        val produto = objeto as Produto
+        preparedStatement?.setString(1,produto.nome)
+        preparedStatement?.setDouble(2,produto.valor)
+        preparedStatement?.setInt(3,produto.quantidade)
+        preparedStatement?.executeUpdate()
+        // Banco já está em modo auto-commit
+//        connectionDAO.commit()
+        connectionDAO.close()
     }
 
     override fun inserirVarios(lista: List<Any>) {
-        TODO("Not yet implemented")
+        val connectionDAO = ConexaoDAO()
+        val preparedStatement = connectionDAO.getPreparedStatement("""
+            INSERT INTO produtos
+            (nome, valor, quantidade)
+            VALUES (?,?,?);
+            """.trimMargin())
+        for (objeto in lista) {
+            val produto = objeto as Produto
+            preparedStatement?.setString(1, produto.nome)
+            preparedStatement?.setDouble(2, produto.valor)
+            preparedStatement?.setInt(3, produto.quantidade)
+            preparedStatement?.executeUpdate()
+            // Banco já está em modo auto-commit
+//        connectionDAO.commit()
+        }
+        connectionDAO.close()
     }
 
     override fun atualizar(objeto: Any) {
-        TODO("Not yet implemented")
+        val connectionDAO = ConexaoDAO()
+        val preparedStatement = connectionDAO.getPreparedStatement("""
+            UPDATE produtos
+            SET nome = ?, valor = ?, quantidade = ?
+            WHERE id = ?;
+            """.trimMargin())
+        val produto = objeto as Produto
+        preparedStatement?.setString(1,produto.nome)
+        preparedStatement?.setDouble(2,produto.valor)
+        preparedStatement?.setInt(3,produto.quantidade)
+        preparedStatement?.setInt(4,produto.id)
+        preparedStatement?.executeUpdate()
+        // Banco já está em modo auto-commit
+//        connectionDAO.commit()
+        connectionDAO.close()
     }
 
     override fun deletar(id: Int) {
-        TODO("Not yet implemented")
+        val connectionDAO = ConexaoDAO()
+        val preparedStatement = connectionDAO.getPreparedStatement("""
+            DELETE FROM produtos
+            WHERE id = ?;
+            """.trimMargin())
+        preparedStatement?.setInt(1,id)
+        preparedStatement?.executeUpdate()
+        // Banco já está em modo auto-commit
+//        connectionDAO.commit()
+        connectionDAO.close()
     }
 
 }
